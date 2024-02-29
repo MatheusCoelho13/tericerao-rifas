@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+html{
+    background-Color:#000;
+}
+
+#h1_title{
+    color: #fff;
+    width: 614px;
+    height: 176px;
+    font-size: 48px;
+    font-family: "Joti One", serif;
+    position: relative;
+    left: 350px;
+    top: 30px;
+    text-align: center;
+}
+#img_logo{
+    height: 481px;
+    width:373px;
+    position: relative;
+    left: 494px;
+    top:45px;
+}
+.menu_rank{
+    width: 348px;
+        height: 453px;
+        background-color: #fff;
+        position: relative;
+                            bottom: 452px;
+                                    left: 59px;
+    }   
+    #menu_h2{
+        position: relative;
+        top:13px;
+        left: 64px;
+        font-family: "Joti One", serif;
+        font-size: 32px;
+    }
+    .login_a{
+        font-family: "Jost", sans-serif;
+        font-size: 22px;
+    }
