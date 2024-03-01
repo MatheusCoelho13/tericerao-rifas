@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./src/html/css/pagamento-style.css">
+  <title>Pagamento</title>
+</head>
+<body>
+  <h2>Escolha seu método de pagamento:</h2>
+  <!-- Botões de pagamento -->
+  <button onclick="pagamentoPix()">Pagamento via Pix</button>
+  <button onclick="pagamentoDinheiro()">Pagamento em Dinheiro</button>
+
+  <script>
+    function pagamentoPix() {
+      // mensagem da caixa de diálogo
+      var chavePix = "161871c1-c15c-4349-9b33-d5661f5bc5d8";
+      var mensagem = "Chave Pix:<br><p>" + chavePix + "</p>";
+
+      //  caixa de diálogo:
+      var dialogo = document.createElement('div');
+      dialogo.classList.add('dialogo-pix'); // Adiciona uma classe para estilização CSS
+      dialogo.innerHTML = mensagem;
+
+      // comprovante:
+      var mesagem = "Comprovante:" 
+      var botaoCompartilhar = document.createElement('input');
+        botaoCompartilhar.type = 'file';
+        botaoCompartilhar.accept = 'image/*';
+        botaoCompartilhar.addEventListener('change', function(event) {
+          if (event.target.files && event.target.files[0]) {
+              var reader = new FileReader();
+              reader.onload = function(e) {
+                  var linkImagem = e.target.result;
+                  var numeroWhatsApp = '6196679088';
+                  var mensagemWhatsApp = 'Olá! Segue o comprovante de pagamento:';
+                  var urlCompartilharWhatsApp = 'https://wa.me/' + numeroWhatsApp + '?text=' + encodeURIComponent(mensagemWhatsApp + '\n' + linkImagem);
+                  window.open(urlCompartilharWhatsApp);
+              };
+              reader.readAsDataURL(event.target.files[0]);
+          }
+      });
+      dialogo.appendChild(botaoCompartilhar);
+
+      document.body.appendChild(dialogo);
+
+      // fechar
+      var botaoFechar = document.createElement('button');
+      botaoFechar.textContent = 'Fechar';
+      botaoFechar.addEventListener('click', function() {
+          document.body.removeChild(dialogo); // Remove a caixa de diálogo ao clicar em "Fechar"
+      });
+      dialogo.appendChild(botaoFechar);
+    }
+
+    function pagamentoDinheiro() {
+      alert("Por favor, entre em contato com algum vendedor para combinar o pagamento em dinheiro.");
+      // Coloque aqui qualquer ação necessária para o pagamento em dinheiro
+    }
+  </script>
+</body>
+</html>

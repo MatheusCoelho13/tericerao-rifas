@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../../css/formulario-style.css">
+  <title>Formulário de Compra</title>
+</head>
+<body>
+  <h2>Preencha o formulário para comprar uma rifa:</h2>
+  <form action="./pagamento.php" method="post" id="formCompra">
+    <label for="nome_completo">Nome Completo:</label><br>
+    <input type="text" id="nome_completo" name="nome_completo"><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br>
+    <label for="telefone">Telefone:</label><br>
+    <input type="tel" id="telefone" name="telefone"><br><br>
+    <input type="submit" value="Enviar">
+  </form>
+
+  <script>
+    document.getElementById("formCompra").addEventListener("submit", function(event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
+      // Redireciona para a página de pagamento
+      window.location.href = "./pagamento.html";
+    });
+  </script>
+</body>
+</html>
