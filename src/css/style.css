@@ -1,17 +1,18 @@
+
 *{
     margin: 0;
     padding: 0;
-   
+   overflow-y: hidden;
 }
 html{
-    background-Color:#000;
+    background-Color:#fff
 }
 
 #h1_title{
-    color: #fff;
+    color: #000000;
     width: 614px;
     height: 176px;
-    font-size: 48px;
+    font-size: 42px;
     font-family: "Joti One", serif;
     position: relative;
     left: 350px;
@@ -23,12 +24,12 @@ html{
     width:373px;
     position: relative;
     left: 494px;
-    top:45px;
+    top:-30px;
 }
 .menu_rank{
     width: 348px;
         height: 453px;
-        background-color: #fff;
+        background-color: #D8CED7;
         position: relative;
                             bottom: 452px;
                                     left: 59px;
@@ -43,4 +44,23 @@ html{
     .login_a{
         font-family: "Jost", sans-serif;
         font-size: 22px;
+    }
+    #button_a{
+        width: 281px;
+        height:66px;
+        background-Color:#32D816;
+        border-radius: 23px;
+        border:0;
+        position: relative;
+        left: 556px;
+        bottom: 497px;
+    }
+    #a_button{
+        color:#ffffff;
+        outline: none;
+        text-decoration: none;
+        font-family: "Josefin Slab", serif;
+        font-size: 24px;
+        font-style: normal;
+        
     }
