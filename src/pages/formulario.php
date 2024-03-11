@@ -1,6 +1,5 @@
-<?php
-require_once("../api/config.php")
-?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,16 +24,25 @@ require_once("../api/config.php")
                     <input type="text" name="usuario" class="form-control" placeholder="nome" id="nome_input" autocomplete="off" maxlength="20" require>
                     <input type="email" name="email" class="form-control" placeholder="email"  id="email_input"autocomplete="off" require>
                     <input type="text" class="form-control" placeholder="Telefone" id="celular" name="telefone" ></div>
-                    <input type="text" name="rifanumber"  id="numero_input"class="form_1" placeholder="número da rifa" autocomplete="off" require>
-                    <a class="btn_TO" href="./pagamento.php">Ir para pagamento</a>
-             
+                    <input type="text" name="rifanumber"  id="numero_input"class="for_1" placeholder="número da rifa" autocomplete="off" require>
+                    <button class="btn_TO" onclick="" href="./pagamento.php"><p id="h_text">Ir para pagamento</p></a>
+             <!-- fazer o esse botao com sweet alert -->
   </form>
+  <img src="../assets/logologo.svg" alt="logo"
+  id="logo_1">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
                   $(document).ready(function() {
                     $('#celular').mask('(00) 0000-00000');
                   });
+                  Swal.fire({
+  title: 'Error!',
+  text: 'Do you want to continue',
+  icon: 'error',
+  confirmButtonText: 'Cool'
+})
                 </script>
 </body>
 </html>
