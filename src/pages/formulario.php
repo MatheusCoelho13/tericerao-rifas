@@ -20,7 +20,7 @@
   <h1 id="h1_title">Cadastro de rifa</h1>
   <h2 id="h2_subtitle"> rifa de pascoa</h2>
   <h3 id="copyright"> copyright Terceirao Coc 2024</h3>
-  <form action="cadastrorifa.php" method="Post">
+  <form id="cad-usuario-form" action="../api/cadastrorifa.php" method="Post" >
                     <input type="text" name="usuario" class="form-control" placeholder="nome" id="nome_input" autocomplete="off" maxlength="20" require>
                     <input type="email" name="email" class="form-control" placeholder="email"  id="email_input"autocomplete="off" require>
                     <input type="text" class="form-control" placeholder="Telefone" id="celular" name="telefone" ></div>
@@ -31,6 +31,7 @@
   <img src="../assets/logologo.svg" alt="logo"
   id="logo_1">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../api/index.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
